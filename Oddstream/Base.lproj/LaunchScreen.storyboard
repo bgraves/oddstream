@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -9,14 +12,49 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
-                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                        <viewControllerLayoutGuide type="top" id="c2C-IB-Vfy"/>
+                        <viewControllerLayoutGuide type="bottom" id="ofi-y1-lab"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" contentMode="scaleToFill" id="VRv-D3-HOW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oddstream-background" translatesAutoresizingMaskIntoConstraints="NO" id="K6y-hy-g2R">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oddstream-logo" translatesAutoresizingMaskIntoConstraints="NO" id="kot-we-fWO">
+                                <rect key="frame" x="51" y="51" width="498" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kot-we-fWO" secondAttribute="height" multiplier="1920:220" id="B1W-Yl-xHi"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oddstream-logo_circle" translatesAutoresizingMaskIntoConstraints="NO" id="tuP-oH-baB">
+                                <rect key="frame" x="172" y="180" width="257" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tuP-oH-baB" secondAttribute="height" multiplier="1920:1793" id="nac-fI-ufx"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oddstream-logo_hexagon" translatesAutoresizingMaskIntoConstraints="NO" id="TaA-Tw-FE0">
+                                <rect key="frame" x="172" y="180" width="257" height="240"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tuP-oH-baB" firstAttribute="centerX" secondItem="VRv-D3-HOW" secondAttribute="centerX" id="3oq-f2-1Tj"/>
+                            <constraint firstItem="kot-we-fWO" firstAttribute="centerY" secondItem="VRv-D3-HOW" secondAttribute="centerY" multiplier="0.265" id="6RR-ak-PEM"/>
+                            <constraint firstItem="tuP-oH-baB" firstAttribute="centerY" secondItem="VRv-D3-HOW" secondAttribute="centerY" id="FQD-qc-hA2"/>
+                            <constraint firstItem="TaA-Tw-FE0" firstAttribute="centerX" secondItem="VRv-D3-HOW" secondAttribute="centerX" id="M9z-ef-o6P"/>
+                            <constraint firstItem="TaA-Tw-FE0" firstAttribute="height" secondItem="tuP-oH-baB" secondAttribute="height" id="SRN-Ru-a44"/>
+                            <constraint firstItem="TaA-Tw-FE0" firstAttribute="centerY" secondItem="VRv-D3-HOW" secondAttribute="centerY" id="Y8t-6a-DqE"/>
+                            <constraint firstAttribute="trailing" secondItem="K6y-hy-g2R" secondAttribute="trailing" id="a27-KH-5RE"/>
+                            <constraint firstItem="tuP-oH-baB" firstAttribute="height" secondItem="K6y-hy-g2R" secondAttribute="height" multiplier="0.4" id="aFb-aR-dIX"/>
+                            <constraint firstItem="K6y-hy-g2R" firstAttribute="leading" secondItem="VRv-D3-HOW" secondAttribute="leading" id="bt7-bQ-17l"/>
+                            <constraint firstItem="kot-we-fWO" firstAttribute="centerX" secondItem="VRv-D3-HOW" secondAttribute="centerX" id="fit-57-TAy"/>
+                            <constraint firstItem="TaA-Tw-FE0" firstAttribute="width" secondItem="tuP-oH-baB" secondAttribute="width" id="hhp-Dk-3ms"/>
+                            <constraint firstItem="kot-we-fWO" firstAttribute="width" secondItem="K6y-hy-g2R" secondAttribute="width" multiplier="0.83" id="lgl-KZ-XCV"/>
+                            <constraint firstAttribute="bottom" secondItem="K6y-hy-g2R" secondAttribute="bottom" id="lxD-Fx-vWj"/>
+                            <constraint firstItem="K6y-hy-g2R" firstAttribute="top" secondItem="VRv-D3-HOW" secondAttribute="top" id="ywq-h3-g1Y"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +62,10 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Oddstream-background" width="1" height="256"/>
+        <image name="Oddstream-logo" width="1920" height="220"/>
+        <image name="Oddstream-logo_circle" width="1920" height="1793"/>
+        <image name="Oddstream-logo_hexagon" width="1920" height="1793"/>
+    </resources>
 </document>

@@ -8,12 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		D60C7FE81C4534D000EC1EDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7FE71C4534D000EC1EDD /* AppDelegate.swift */; };
-		D60C7FEA1C4534D000EC1EDD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7FE91C4534D000EC1EDD /* ViewController.swift */; };
+		D60C7FEA1C4534D000EC1EDD /* SelectTourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7FE91C4534D000EC1EDD /* SelectTourViewController.swift */; };
 		D60C7FED1C4534D000EC1EDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D60C7FEB1C4534D000EC1EDD /* Main.storyboard */; };
 		D60C7FEF1C4534D000EC1EDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60C7FEE1C4534D000EC1EDD /* Assets.xcassets */; };
 		D60C7FF21C4534D000EC1EDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D60C7FF01C4534D000EC1EDD /* LaunchScreen.storyboard */; };
 		D60C7FFD1C4534D000EC1EDD /* OddstreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7FFC1C4534D000EC1EDD /* OddstreamTests.swift */; };
 		D60C80081C4534D000EC1EDD /* OddstreamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C80071C4534D000EC1EDD /* OddstreamUITests.swift */; };
+		D60C80181C4544A800EC1EDD /* Lekton-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D60C80151C4544A800EC1EDD /* Lekton-Regular.ttf */; };
+		D60C80191C4544A800EC1EDD /* Lekton-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D60C80161C4544A800EC1EDD /* Lekton-Italic.ttf */; };
+		D60C801A1C4544A800EC1EDD /* Lekton-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D60C80171C4544A800EC1EDD /* Lekton-Bold.ttf */; };
+		D60C801C1C4545E100EC1EDD /* WalkAroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C801B1C4545E100EC1EDD /* WalkAroundViewController.swift */; };
+		D60C801E1C4545FB00EC1EDD /* CheckBeaconViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C801D1C4545FB00EC1EDD /* CheckBeaconViewController.swift */; };
+		D60C80201C45460D00EC1EDD /* AudioContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C801F1C45460D00EC1EDD /* AudioContentViewController.swift */; };
+		D60C80221C45461700EC1EDD /* VideoContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C80211C45461700EC1EDD /* VideoContentViewController.swift */; };
+		D60C80241C45462000EC1EDD /* TextContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C80231C45462000EC1EDD /* TextContentViewController.swift */; };
+		D60C80261C45462900EC1EDD /* ImageContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C80251C45462900EC1EDD /* ImageContentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +45,7 @@
 /* Begin PBXFileReference section */
 		D60C7FE41C4534D000EC1EDD /* Oddstream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oddstream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D60C7FE71C4534D000EC1EDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D60C7FE91C4534D000EC1EDD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D60C7FE91C4534D000EC1EDD /* SelectTourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTourViewController.swift; sourceTree = "<group>"; };
 		D60C7FEC1C4534D000EC1EDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D60C7FEE1C4534D000EC1EDD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D60C7FF11C4534D000EC1EDD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +56,15 @@
 		D60C80031C4534D000EC1EDD /* OddstreamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OddstreamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D60C80071C4534D000EC1EDD /* OddstreamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OddstreamUITests.swift; sourceTree = "<group>"; };
 		D60C80091C4534D000EC1EDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D60C80151C4544A800EC1EDD /* Lekton-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lekton-Regular.ttf"; sourceTree = "<group>"; };
+		D60C80161C4544A800EC1EDD /* Lekton-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lekton-Italic.ttf"; sourceTree = "<group>"; };
+		D60C80171C4544A800EC1EDD /* Lekton-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lekton-Bold.ttf"; sourceTree = "<group>"; };
+		D60C801B1C4545E100EC1EDD /* WalkAroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkAroundViewController.swift; sourceTree = "<group>"; };
+		D60C801D1C4545FB00EC1EDD /* CheckBeaconViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBeaconViewController.swift; sourceTree = "<group>"; };
+		D60C801F1C45460D00EC1EDD /* AudioContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioContentViewController.swift; sourceTree = "<group>"; };
+		D60C80211C45461700EC1EDD /* VideoContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoContentViewController.swift; sourceTree = "<group>"; };
+		D60C80231C45462000EC1EDD /* TextContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextContentViewController.swift; sourceTree = "<group>"; };
+		D60C80251C45462900EC1EDD /* ImageContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageContentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +115,21 @@
 		D60C7FE61C4534D000EC1EDD /* Oddstream */ = {
 			isa = PBXGroup;
 			children = (
+				D60C80151C4544A800EC1EDD /* Lekton-Regular.ttf */,
+				D60C80161C4544A800EC1EDD /* Lekton-Italic.ttf */,
+				D60C80171C4544A800EC1EDD /* Lekton-Bold.ttf */,
 				D60C7FE71C4534D000EC1EDD /* AppDelegate.swift */,
-				D60C7FE91C4534D000EC1EDD /* ViewController.swift */,
+				D60C7FE91C4534D000EC1EDD /* SelectTourViewController.swift */,
 				D60C7FEB1C4534D000EC1EDD /* Main.storyboard */,
 				D60C7FEE1C4534D000EC1EDD /* Assets.xcassets */,
 				D60C7FF01C4534D000EC1EDD /* LaunchScreen.storyboard */,
 				D60C7FF31C4534D000EC1EDD /* Info.plist */,
+				D60C801B1C4545E100EC1EDD /* WalkAroundViewController.swift */,
+				D60C801D1C4545FB00EC1EDD /* CheckBeaconViewController.swift */,
+				D60C801F1C45460D00EC1EDD /* AudioContentViewController.swift */,
+				D60C80211C45461700EC1EDD /* VideoContentViewController.swift */,
+				D60C80231C45462000EC1EDD /* TextContentViewController.swift */,
+				D60C80251C45462900EC1EDD /* ImageContentViewController.swift */,
 			);
 			path = Oddstream;
 			sourceTree = "<group>";
@@ -231,7 +258,10 @@
 			files = (
 				D60C7FF21C4534D000EC1EDD /* LaunchScreen.storyboard in Resources */,
 				D60C7FEF1C4534D000EC1EDD /* Assets.xcassets in Resources */,
+				D60C801A1C4544A800EC1EDD /* Lekton-Bold.ttf in Resources */,
+				D60C80181C4544A800EC1EDD /* Lekton-Regular.ttf in Resources */,
 				D60C7FED1C4534D000EC1EDD /* Main.storyboard in Resources */,
+				D60C80191C4544A800EC1EDD /* Lekton-Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +286,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D60C7FEA1C4534D000EC1EDD /* ViewController.swift in Sources */,
+				D60C80261C45462900EC1EDD /* ImageContentViewController.swift in Sources */,
+				D60C80221C45461700EC1EDD /* VideoContentViewController.swift in Sources */,
+				D60C80201C45460D00EC1EDD /* AudioContentViewController.swift in Sources */,
+				D60C7FEA1C4534D000EC1EDD /* SelectTourViewController.swift in Sources */,
+				D60C80241C45462000EC1EDD /* TextContentViewController.swift in Sources */,
 				D60C7FE81C4534D000EC1EDD /* AppDelegate.swift in Sources */,
+				D60C801C1C4545E100EC1EDD /* WalkAroundViewController.swift in Sources */,
+				D60C801E1C4545FB00EC1EDD /* CheckBeaconViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
