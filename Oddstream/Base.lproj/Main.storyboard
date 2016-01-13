@@ -13,8 +13,6 @@
             <string>Lekton-Bold</string>
             <string>Lekton-Bold</string>
             <string>Lekton-Bold</string>
-            <string>Lekton-Bold</string>
-            <string>Lekton-Bold</string>
         </mutableArray>
         <mutableArray key="Lekton-Regular.ttf">
             <string>Lekton-Regular</string>
@@ -58,68 +56,29 @@
                                     <constraint firstAttribute="width" secondItem="XTl-co-I4U" secondAttribute="height" multiplier="1920:220" id="BbM-wA-7MZ"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hkv-Q4-Xkp">
-                                <rect key="frame" x="66" y="223" width="468" height="64"/>
-                                <fontDescription key="fontDescription" name="Lekton-Bold" family="Lekton" pointSize="24"/>
-                                <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
-                                <state key="normal" title="Adult tour">
-                                    <color key="titleColor" red="0.96683346949891058" green="0.8901960784313725" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="lKF-Ww-gFH" kind="show" id="czU-vO-c7X"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your tour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDH-XN-9GZ">
                                 <rect key="frame" x="51" y="128" width="144" height="18"/>
                                 <fontDescription key="fontDescription" name="Lekton-Bold" family="Lekton" pointSize="18"/>
                                 <color key="textColor" red="0.96862745098039216" green="0.8901960784313725" blue="0.8666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MNc-L8-akm">
-                                <rect key="frame" x="66" y="313" width="468" height="64"/>
-                                <fontDescription key="fontDescription" name="Lekton-Bold" family="Lekton" pointSize="24"/>
-                                <inset key="contentEdgeInsets" minX="20" minY="20" maxX="20" maxY="20"/>
-                                <state key="normal" title="Kids tour">
-                                    <color key="titleColor" red="0.96683346950000004" green="0.89019607840000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                        <integer key="value" value="2"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <segue destination="lKF-Ww-gFH" kind="show" id="unF-bm-wo7"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="hkv-Q4-Xkp" firstAttribute="centerX" secondItem="YUT-0l-SOl" secondAttribute="centerX" id="1vp-fE-zDf"/>
                             <constraint firstItem="XTl-co-I4U" firstAttribute="centerY" secondItem="YUT-0l-SOl" secondAttribute="centerY" multiplier="0.265" id="2l4-LD-LUA"/>
-                            <constraint firstItem="hkv-Q4-Xkp" firstAttribute="centerY" secondItem="YUT-0l-SOl" secondAttribute="centerY" multiplier="0.85" id="3BV-kj-PGu"/>
                             <constraint firstAttribute="bottom" secondItem="qhh-Yi-hj3" secondAttribute="bottom" id="82X-Ip-338"/>
-                            <constraint firstItem="hkv-Q4-Xkp" firstAttribute="width" secondItem="qhh-Yi-hj3" secondAttribute="width" multiplier="0.78" id="8GH-JV-hpa"/>
                             <constraint firstAttribute="trailing" secondItem="qhh-Yi-hj3" secondAttribute="trailing" id="8di-hv-uGS"/>
                             <constraint firstItem="zDH-XN-9GZ" firstAttribute="top" secondItem="XTl-co-I4U" secondAttribute="bottom" constant="20" id="JED-Eq-Ecq"/>
                             <constraint firstItem="XTl-co-I4U" firstAttribute="centerX" secondItem="YUT-0l-SOl" secondAttribute="centerX" id="adp-ts-ANU"/>
                             <constraint firstItem="XTl-co-I4U" firstAttribute="width" secondItem="qhh-Yi-hj3" secondAttribute="width" multiplier="0.83" id="ajL-Jz-Mlb"/>
                             <constraint firstItem="qhh-Yi-hj3" firstAttribute="leading" secondItem="YUT-0l-SOl" secondAttribute="leading" id="ba5-eb-Txc"/>
-                            <constraint firstItem="MNc-L8-akm" firstAttribute="width" secondItem="qhh-Yi-hj3" secondAttribute="width" multiplier="0.78" id="dap-MC-zoi"/>
                             <constraint firstItem="zDH-XN-9GZ" firstAttribute="leading" secondItem="XTl-co-I4U" secondAttribute="leading" id="pMG-Pa-GTe"/>
                             <constraint firstItem="qhh-Yi-hj3" firstAttribute="top" secondItem="YUT-0l-SOl" secondAttribute="top" id="rF2-al-hhT"/>
-                            <constraint firstItem="MNc-L8-akm" firstAttribute="centerX" secondItem="YUT-0l-SOl" secondAttribute="centerX" id="twg-xn-6ex"/>
-                            <constraint firstItem="MNc-L8-akm" firstAttribute="centerY" secondItem="YUT-0l-SOl" secondAttribute="centerY" multiplier="1.15" id="vIs-t7-mOE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iDB-9E-IbJ"/>
                     <connections>
-                        <outlet property="adultButton" destination="hkv-Q4-Xkp" id="bVa-Ca-qPz"/>
-                        <outlet property="kidsButton" destination="MNc-L8-akm" id="V8t-eS-G6t"/>
+                        <segue destination="lKF-Ww-gFH" kind="show" identifier="ShowWalkAroundViewController" id="g8s-Iu-s2W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -532,7 +491,4 @@ Highlights</string>
         <image name="Oddstream-logo_circle" width="1920" height="1793"/>
         <image name="Oddstream-logo_hexagon" width="1920" height="1793"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="unF-bm-wo7"/>
-    </inferredMetricsTieBreakers>
 </document>
