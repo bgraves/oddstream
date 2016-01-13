@@ -358,15 +358,31 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kSu-T9-bsL">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRr-Ye-I94">
+                                <rect key="frame" x="560" y="28" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="MIN-9H-NiZ"/>
+                                    <constraint firstAttribute="height" constant="20" id="z4x-ng-nOa"/>
+                                </constraints>
+                                <state key="normal" image="Oddstream-cross"/>
+                                <connections>
+                                    <action selector="back:" destination="Ibu-0j-gnv" eventType="touchUpInside" id="j0h-cu-TBb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aRr-Ye-I94" secondAttribute="trailing" constant="20" id="Clx-Ri-hkT"/>
                             <constraint firstItem="kSu-T9-bsL" firstAttribute="leading" secondItem="yDz-nZ-9pl" secondAttribute="leading" id="aAk-U8-XrG"/>
                             <constraint firstAttribute="bottom" secondItem="kSu-T9-bsL" secondAttribute="bottom" id="bif-Eb-RbN"/>
                             <constraint firstItem="kSu-T9-bsL" firstAttribute="top" secondItem="yDz-nZ-9pl" secondAttribute="top" id="pwb-13-v95"/>
                             <constraint firstAttribute="trailing" secondItem="kSu-T9-bsL" secondAttribute="trailing" id="wyh-dF-DkY"/>
+                            <constraint firstItem="aRr-Ye-I94" firstAttribute="top" secondItem="yDz-nZ-9pl" secondAttribute="top" constant="20" id="xat-Rs-ucP"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="kSu-T9-bsL" id="h0V-Y9-mVF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uwk-BF-cFh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
