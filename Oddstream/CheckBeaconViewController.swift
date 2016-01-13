@@ -27,6 +27,18 @@ class CheckBeaconViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        performSegueWithIdentifier("ShowAudioContentViewController", sender: self)
+        var item = [ "id": 320, "category": "text", "title": "A text item", "url": "http://oddstream.miraclethings.nl/page/320/a-text-item" ]
+        var categoryToSegue = [ "text": "ShowTextContentViewController", "image": "ShowImageContentViewController", "video": "ShowVideoContentViewController", "audio": "ShowAudioContentViewController" ]
+        let segue = categoryToSegue[item["category"] as! String]
+        if (segue != nil) {
+            performSegueWithIdentifier(segue as String!, sender: item)
+        } else {
+            navigationController?.popViewControllerAnimated(true)
+        }
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let contentViewController = segue.destinationViewController as! ContentViewController
+        contentViewController.item = sender as? NSDictionary
     }
 }
