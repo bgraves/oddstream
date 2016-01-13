@@ -10,6 +10,7 @@ import UIKit
 
 class WalkAroundViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
+    var tour: NSDictionary? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
