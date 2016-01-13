@@ -13,6 +13,7 @@
             <string>Lekton-Bold</string>
             <string>Lekton-Bold</string>
             <string>Lekton-Bold</string>
+            <string>Lekton-Bold</string>
         </mutableArray>
         <mutableArray key="Lekton-Regular.ttf">
             <string>Lekton-Regular</string>
@@ -235,7 +236,7 @@
                         <segue destination="ZeU-NU-Vju" kind="show" identifier="ShowTextContentViewController" id="NIc-YH-VHZ"/>
                         <segue destination="Ibu-0j-gnv" kind="show" identifier="ShowImageContentViewController" id="xqi-TU-eOT"/>
                         <segue destination="utc-oM-bqo" kind="show" identifier="ShowVideoContentViewController" id="ixv-YC-J0s"/>
-                        <segue destination="Yt2-Pw-Zp9" kind="show" identifier="ShowAudioContentViewController" action="showDetailViewController:sender:" id="xY8-hS-4Hh"/>
+                        <segue destination="Yt2-Pw-Zp9" kind="show" identifier="ShowAudioContentViewController" id="beN-zo-dow"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1oo-oZ-M8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -253,8 +254,69 @@
                     <view key="view" contentMode="scaleToFill" id="7B2-cr-SdW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oddstream-background" translatesAutoresizingMaskIntoConstraints="NO" id="ZtU-az-bz5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9D7-GC-ZpH">
+                                <rect key="frame" x="20" y="20" width="560" height="96"/>
+                                <string key="text">OddstreamVideomappingSchouwburg CuijkHighlights</string>
+                                <fontDescription key="fontDescription" name="Lekton-Bold" family="Lekton" pointSize="24"/>
+                                <color key="textColor" red="0.96683346950000004" green="0.89019607840000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F2V-ge-Zch">
+                                <rect key="frame" x="0.0" y="554" width="600" height="46"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WmG-Ii-iOh">
+                                        <rect key="frame" x="8" y="12" width="46" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.96683346950000004" green="0.89019607840000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x97-U7-wGZ">
+                                        <rect key="frame" x="546" y="12" width="46" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.96683346950000004" green="0.89019607840000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MJY-SE-86I">
+                                        <rect key="frame" x="60" y="8" width="480" height="31"/>
+                                    </slider>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="WmG-Ii-iOh" firstAttribute="leading" secondItem="F2V-ge-Zch" secondAttribute="leading" constant="8" id="1In-Ip-2Ky"/>
+                                    <constraint firstItem="x97-U7-wGZ" firstAttribute="leading" secondItem="MJY-SE-86I" secondAttribute="trailing" constant="8" id="94k-dR-B9D"/>
+                                    <constraint firstItem="MJY-SE-86I" firstAttribute="centerY" secondItem="WmG-Ii-iOh" secondAttribute="centerY" id="Cpp-4M-U8l"/>
+                                    <constraint firstAttribute="bottom" secondItem="MJY-SE-86I" secondAttribute="bottom" constant="8" id="QGq-EI-tvM"/>
+                                    <constraint firstAttribute="trailing" secondItem="x97-U7-wGZ" secondAttribute="trailing" constant="8" id="WxT-H3-E6x"/>
+                                    <constraint firstItem="MJY-SE-86I" firstAttribute="top" secondItem="F2V-ge-Zch" secondAttribute="top" constant="8" id="amR-Lp-m9s"/>
+                                    <constraint firstItem="x97-U7-wGZ" firstAttribute="centerY" secondItem="MJY-SE-86I" secondAttribute="centerY" id="jn8-4a-8qN"/>
+                                    <constraint firstItem="MJY-SE-86I" firstAttribute="leading" secondItem="WmG-Ii-iOh" secondAttribute="trailing" constant="8" id="x42-X7-MWk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ZtU-az-bz5" secondAttribute="trailing" id="IsC-0V-CM1"/>
+                            <constraint firstItem="ZtU-az-bz5" firstAttribute="top" secondItem="7B2-cr-SdW" secondAttribute="top" id="Mog-bV-tci"/>
+                            <constraint firstAttribute="bottom" secondItem="F2V-ge-Zch" secondAttribute="bottom" id="R87-wv-ex8"/>
+                            <constraint firstItem="9D7-GC-ZpH" firstAttribute="top" secondItem="7B2-cr-SdW" secondAttribute="top" constant="20" id="Tbt-gg-rPb"/>
+                            <constraint firstAttribute="bottom" secondItem="ZtU-az-bz5" secondAttribute="bottom" id="WsM-ml-Jur"/>
+                            <constraint firstAttribute="trailing" secondItem="9D7-GC-ZpH" secondAttribute="trailing" constant="20" id="gaF-Ir-DKo"/>
+                            <constraint firstItem="9D7-GC-ZpH" firstAttribute="leading" secondItem="7B2-cr-SdW" secondAttribute="leading" constant="20" id="teb-mb-F89"/>
+                            <constraint firstItem="ZtU-az-bz5" firstAttribute="leading" secondItem="7B2-cr-SdW" secondAttribute="leading" id="vHs-my-d1U"/>
+                            <constraint firstItem="F2V-ge-Zch" firstAttribute="leading" secondItem="7B2-cr-SdW" secondAttribute="leading" id="x90-ih-oSn"/>
+                            <constraint firstAttribute="trailing" secondItem="F2V-ge-Zch" secondAttribute="trailing" id="yEn-L7-gHV"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentTimeLabel" destination="WmG-Ii-iOh" id="vNC-LB-Ko4"/>
+                        <outlet property="timeSlider" destination="MJY-SE-86I" id="w3w-JP-KQ6"/>
+                        <outlet property="titleLabel" destination="9D7-GC-ZpH" id="0lf-kx-mjs"/>
+                        <outlet property="totalTimeLabel" destination="x97-U7-wGZ" id="7B6-Ry-dP0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OeE-2V-ZFK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

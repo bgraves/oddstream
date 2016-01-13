@@ -27,6 +27,6 @@ class CheckBeaconViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        performSegueWithIdentifier("ShowImageContentViewController", sender: self)
+        performSegueWithIdentifier("ShowAudioContentViewController", sender: self)
     }
 }
