@@ -8,16 +8,12 @@
 
 import UIKit
 
-class ImageContentViewController: UIViewController {
+class ImageContentViewController: ContentViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         imageView.image = UIImage.init(named: "Oddstream-background")
-    }
-    
-    @IBAction func back(_: AnyObject) {
-        navigationController?.popToViewController((navigationController?.viewControllers[(navigationController?.viewControllers.count)! - 3])!, animated: true)
     }
 }

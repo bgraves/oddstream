@@ -8,13 +8,9 @@
 
 import UIKit
 
-class AudioContentViewController: UIViewController {
+class AudioContentViewController: ContentViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var currentTimeLabel: UILabel!
     @IBOutlet weak var totalTimeLabel: UILabel!
     @IBOutlet weak var timeSlider: UISlider!
-    
-    @IBAction func back(_: AnyObject) {
-        navigationController?.popToViewController((navigationController?.viewControllers[(navigationController?.viewControllers.count)! - 3])!, animated: true)
-    }
 }

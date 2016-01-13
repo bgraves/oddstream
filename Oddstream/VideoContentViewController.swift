@@ -8,12 +8,8 @@
 
 import UIKit
 
-class VideoContentViewController: UIViewController {
+class VideoContentViewController: ContentViewController {
     @IBOutlet weak var currentTimeLabel: UILabel!
     @IBOutlet weak var totalTimeLabel: UILabel!
     @IBOutlet weak var timeSlider: UISlider!
-    
-    @IBAction func back(_: AnyObject) {
-        navigationController?.popToViewController((navigationController?.viewControllers[(navigationController?.viewControllers.count)! - 3])!, animated: true)
-    }
 }

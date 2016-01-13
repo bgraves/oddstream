@@ -8,11 +8,7 @@
 
 import UIKit
 
-class TextContentViewController: UIViewController {
+class TextContentViewController: ContentViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var bodyLabel: UILabel!
-    
-    @IBAction func back(_: AnyObject) {
-        navigationController?.popToViewController((navigationController?.viewControllers[(navigationController?.viewControllers.count)! - 3])!, animated: true)
-    }
 }
