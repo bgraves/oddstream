@@ -16,6 +16,12 @@ class WalkAroundViewController: UIViewController {
         
         self.imageView.image = UIImage.animatedImageNamed("Oddstream-illustration-step", duration: 4.0)
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        performSegueWithIdentifier("ShowCheckBeaconViewController", sender: self)
+    }
 
     @IBAction func back(_: AnyObject) {
         navigationController?.popViewControllerAnimated(true)

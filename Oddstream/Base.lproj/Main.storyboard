@@ -178,6 +178,7 @@
                     <connections>
                         <outlet property="imageView" destination="jN8-SQ-PPe" id="gDb-Lo-UBk"/>
                         <segue destination="bDp-HC-uy3" kind="unwind" customClass="FadeSegue" customModule="Oddstream" customModuleProvider="target" unwindAction="returnFromSegueActions:" id="g9X-Yr-1TZ"/>
+                        <segue destination="dpr-kN-xfK" kind="show" identifier="ShowCheckBeaconViewController" id="wFl-cM-H0H"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Dr-EZ-r2K" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -225,6 +226,9 @@
                             <constraint firstItem="M9j-0a-Bvz" firstAttribute="centerX" secondItem="Ta7-ry-W2n" secondAttribute="centerX" id="uaH-Qa-z3S"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="M9j-0a-Bvz" id="o07-07-PNa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1oo-oZ-M8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
