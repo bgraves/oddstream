@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -299,15 +300,28 @@ Highlights</string>
                                     <constraint firstItem="MJY-SE-86I" firstAttribute="leading" secondItem="WmG-Ii-iOh" secondAttribute="trailing" constant="8" id="x42-X7-MWk"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dqN-r4-DXd">
+                                <rect key="frame" x="560" y="20" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="DpW-Gx-1iP"/>
+                                    <constraint firstAttribute="width" constant="20" id="FxB-Zb-UEd"/>
+                                </constraints>
+                                <state key="normal" image="Oddstream-cross"/>
+                                <connections>
+                                    <action selector="back:" destination="Yt2-Pw-Zp9" eventType="touchUpInside" id="JUN-85-AwB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="dqN-r4-DXd" firstAttribute="trailing" secondItem="7B2-cr-SdW" secondAttribute="trailingMargin" id="6tV-at-C6a"/>
                             <constraint firstAttribute="trailing" secondItem="ZtU-az-bz5" secondAttribute="trailing" id="IsC-0V-CM1"/>
                             <constraint firstItem="ZtU-az-bz5" firstAttribute="top" secondItem="7B2-cr-SdW" secondAttribute="top" id="Mog-bV-tci"/>
                             <constraint firstAttribute="bottom" secondItem="F2V-ge-Zch" secondAttribute="bottom" id="R87-wv-ex8"/>
                             <constraint firstItem="9D7-GC-ZpH" firstAttribute="top" secondItem="7B2-cr-SdW" secondAttribute="top" constant="20" id="Tbt-gg-rPb"/>
                             <constraint firstAttribute="bottom" secondItem="ZtU-az-bz5" secondAttribute="bottom" id="WsM-ml-Jur"/>
                             <constraint firstAttribute="trailing" secondItem="9D7-GC-ZpH" secondAttribute="trailing" constant="20" id="gaF-Ir-DKo"/>
+                            <constraint firstItem="dqN-r4-DXd" firstAttribute="top" secondItem="7B2-cr-SdW" secondAttribute="topMargin" constant="20" id="i3y-n0-rii"/>
                             <constraint firstItem="9D7-GC-ZpH" firstAttribute="leading" secondItem="7B2-cr-SdW" secondAttribute="leading" constant="20" id="teb-mb-F89"/>
                             <constraint firstItem="ZtU-az-bz5" firstAttribute="leading" secondItem="7B2-cr-SdW" secondAttribute="leading" id="vHs-my-d1U"/>
                             <constraint firstItem="F2V-ge-Zch" firstAttribute="leading" secondItem="7B2-cr-SdW" secondAttribute="leading" id="x90-ih-oSn"/>
