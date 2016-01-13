@@ -23,4 +23,10 @@ class CheckBeaconViewController: UIViewController {
         rotateAnimation.repeatCount = HUGE
         imageView.layer.addAnimation(rotateAnimation, forKey: nil)
     }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        performSegueWithIdentifier("ShowTextContentViewController", sender: self)
+    }
 }

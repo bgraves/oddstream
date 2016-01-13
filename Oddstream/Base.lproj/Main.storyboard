@@ -12,6 +12,10 @@
             <string>Lekton-Bold</string>
             <string>Lekton-Bold</string>
             <string>Lekton-Bold</string>
+            <string>Lekton-Bold</string>
+        </mutableArray>
+        <mutableArray key="Lekton-Regular.ttf">
+            <string>Lekton-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -228,6 +232,7 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="M9j-0a-Bvz" id="o07-07-PNa"/>
+                        <segue destination="ZeU-NU-Vju" kind="show" identifier="ShowTextContentViewController" id="NIc-YH-VHZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1oo-oZ-M8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -281,8 +286,55 @@
                     <view key="view" contentMode="scaleToFill" id="MTN-xd-rOB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oddstream-background" translatesAutoresizingMaskIntoConstraints="NO" id="J1h-aw-Cdz">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video as a means of protesting" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GV6-DO-JCq">
+                                <rect key="frame" x="20" y="20" width="560" height="24"/>
+                                <fontDescription key="fontDescription" name="Lekton-Bold" family="Lekton" pointSize="24"/>
+                                <color key="textColor" red="0.96683346950000004" green="0.89019607840000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSj-dS-PN0">
+                                <rect key="frame" x="20" y="64" width="560" height="54"/>
+                                <string key="text">Everybody knows video as a tool for documenting stuff. But is it possible to make a step further? Is it possible to change people’s behaviour just showing images and sound?</string>
+                                <fontDescription key="fontDescription" name="Lekton-Regular" family="Lekton" pointSize="18"/>
+                                <color key="textColor" red="0.96683346950000004" green="0.89019607840000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Is-W5-Tgt">
+                                <rect key="frame" x="560" y="20" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="MJ6-iy-1JA"/>
+                                    <constraint firstAttribute="height" constant="20" id="hhV-at-UFU"/>
+                                </constraints>
+                                <state key="normal" image="Oddstream-cross"/>
+                                <connections>
+                                    <action selector="back:" destination="ZeU-NU-Vju" eventType="touchUpInside" id="iY1-Pt-AoU"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J1h-aw-Cdz" firstAttribute="top" secondItem="MTN-xd-rOB" secondAttribute="top" id="0BZ-V4-9x2"/>
+                            <constraint firstItem="mSj-dS-PN0" firstAttribute="top" secondItem="GV6-DO-JCq" secondAttribute="bottom" constant="20" id="3UB-pA-HV7"/>
+                            <constraint firstAttribute="trailing" secondItem="5Is-W5-Tgt" secondAttribute="trailing" constant="20" id="A6F-b9-3Ii"/>
+                            <constraint firstAttribute="trailing" secondItem="GV6-DO-JCq" secondAttribute="trailing" constant="20" id="B3y-3N-Vhk"/>
+                            <constraint firstAttribute="trailing" secondItem="J1h-aw-Cdz" secondAttribute="trailing" id="QBB-Vt-A33"/>
+                            <constraint firstAttribute="bottom" secondItem="J1h-aw-Cdz" secondAttribute="bottom" id="Rg8-5Z-0MR"/>
+                            <constraint firstItem="mSj-dS-PN0" firstAttribute="leading" secondItem="MTN-xd-rOB" secondAttribute="leading" constant="20" id="efO-Yh-ayV"/>
+                            <constraint firstItem="5Is-W5-Tgt" firstAttribute="top" secondItem="MTN-xd-rOB" secondAttribute="top" constant="20" id="hXg-f4-8bR"/>
+                            <constraint firstItem="GV6-DO-JCq" firstAttribute="top" secondItem="MTN-xd-rOB" secondAttribute="top" constant="20" id="mYv-wu-mXY"/>
+                            <constraint firstItem="J1h-aw-Cdz" firstAttribute="leading" secondItem="MTN-xd-rOB" secondAttribute="leading" id="qLb-Tq-zdd"/>
+                            <constraint firstAttribute="trailing" secondItem="mSj-dS-PN0" secondAttribute="trailing" constant="20" id="rM9-dZ-Xeq"/>
+                            <constraint firstItem="GV6-DO-JCq" firstAttribute="leading" secondItem="MTN-xd-rOB" secondAttribute="leading" constant="20" id="zip-dx-749"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bodyLabel" destination="mSj-dS-PN0" id="o6m-Ra-rlU"/>
+                        <outlet property="titleLabel" destination="GV6-DO-JCq" id="1Q1-G9-0nd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEF-TS-FT4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
