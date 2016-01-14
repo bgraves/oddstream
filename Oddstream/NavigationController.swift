@@ -14,7 +14,7 @@ class NavigationController: UINavigationController {
     }
     
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        return self.topViewController is VideoContentViewController ? [UIInterfaceOrientationMask.Portrait, UIInterfaceOrientationMask.Landscape] : UIInterfaceOrientationMask.Portrait
+        return self.topViewController is ContentViewController ? [UIInterfaceOrientationMask.Portrait, UIInterfaceOrientationMask.Landscape] : UIInterfaceOrientationMask.Portrait
     }
     
     override func shouldAutorotate() -> Bool {

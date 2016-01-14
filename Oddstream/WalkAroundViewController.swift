@@ -34,9 +34,14 @@ class WalkAroundViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-//        performSegueWithIdentifier("ShowCheckBeaconViewController", sender: self)
+        performSegueWithIdentifier("ShowContentViewController", sender: self)
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let contentViewController = segue.destinationViewController as! ContentViewController
+        contentViewController.item = [ "id": 320, "category": "text", "title": "A text item", "url": "http://oddstream.miraclethings.nl/page/320/a-text-item" ]
+    }
+    
     @IBAction func back(_: AnyObject) {
         navigationController?.popViewControllerAnimated(true)
     }
