@@ -40,8 +40,8 @@ class WalkAroundViewController: UIViewController, CLLocationManagerDelegate {
                     if let uuid = NSUUID(UUIDString: uuidString as! String) {
                         if let major = beacon["major"] {
                             if let minor = beacon["minor"] {
-                                if let title = beacon["title"] {
-                                    let region = CLBeaconRegion(proximityUUID: uuid, major: UInt16(major as! Int), minor: UInt16(minor as! Int), identifier: "\(title).\(uuidString)")
+                                if let id = beacon["id"] {
+                                    let region = CLBeaconRegion(proximityUUID: uuid, major: UInt16(major as! Int), minor: UInt16(minor as! Int), identifier: "\(id)")
                                     self.regions.append(region)
                                 }
                             }
