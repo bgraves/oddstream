@@ -14,6 +14,8 @@ class WalkAroundViewController: UIViewController, CLLocationManagerDelegate {
     var tourId: Int = 0
     var tour: Dictionary<String, AnyObject> = [:]
     var locationManager = CLLocationManager()
+    var regions: Array<CLBeaconRegion> = []
+    var ranging = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +26,6 @@ class WalkAroundViewController: UIViewController, CLLocationManagerDelegate {
         if locationManager.respondsToSelector("requestWhenInUseAuthorization") {
             locationManager.requestWhenInUseAuthorization()
         }
-        locationManager.startUpdatingLocation()
 
         let url = NSURL(string: "http://oddstream.miraclethings.nl/api/oddstream/tour?id=\(tourId)")
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
@@ -36,20 +37,54 @@ class WalkAroundViewController: UIViewController, CLLocationManagerDelegate {
             for item in self.tour["items"] as! Array<Dictionary<String, AnyObject>> {
                 var beacon: Dictionary<String, AnyObject> = item["beacon"] as! Dictionary<String, AnyObject>
                 if let uuidString = beacon["uuid"] {
-                    if let uuid = NSUUID(UUIDString: "f7826da6-4fa2-4e98-8024-bc5b71e0893e") { // uuidString as! String) {
+                    if let uuid = NSUUID(UUIDString: uuidString as! String) {
                         if let major = beacon["major"] {
                             if let minor = beacon["minor"] {
-                                if let url = item["url"] {
-                                    let region = CLBeaconRegion(proximityUUID: uuid, major: UInt16(major as! Int), minor: UInt16(minor as! Int), identifier: url as! String)
-                                    self.locationManager.startRangingBeaconsInRegion(region)
+                                if let title = beacon["title"] {
+                                    let region = CLBeaconRegion(proximityUUID: uuid, major: UInt16(major as! Int), minor: UInt16(minor as! Int), identifier: "\(title).\(uuidString)")
+                                    self.regions.append(region)
                                 }
                             }
                         }
                     }
                 }
             }
+            
+            self.startRangingBeacons()
         }
         task.resume()
+    }
+    
+    func startRangingBeacons() {
+        if (!ranging && regions.count > 0) {
+            ranging = true
+            locationManager.startUpdatingLocation()
+            for region in regions {
+                self.locationManager.startRangingBeaconsInRegion(region)
+            }
+        }
+    }
+    
+    func stopRangingBeacons() {
+        if (ranging) {
+            for region in regions {
+                self.locationManager.stopRangingBeaconsInRegion(region)
+            }
+            locationManager.stopUpdatingLocation()
+            ranging = false
+        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+        startRangingBeacons()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        stopRangingBeacons()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -63,13 +98,16 @@ class WalkAroundViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
         for beacon in beacons {
-            if (beacon.rssi > -44) {
+            if (beacon.rssi >= -55) {
                 for item in self.tour["items"] as! Array<Dictionary<String, AnyObject>> {
                     var itemBeacon: Dictionary<String, AnyObject> = item["beacon"] as! Dictionary<String, AnyObject>
-                    if let uuidString = itemBeacon["uuid"] {
-                        if (beacon.proximityUUID.UUIDString == uuidString as! String) {
-                            performSegueWithIdentifier("ShowContentViewController", sender: item)
-                            break
+                    if let major = itemBeacon["major"] {
+                        if let minor = itemBeacon["minor"] {
+                            if (beacon.major == major as! Int && beacon.minor == minor as! Int) {
+                                stopRangingBeacons()
+                                performSegueWithIdentifier("ShowContentViewController", sender: item)
+                                break
+                            }
                         }
                     }
                 }
@@ -78,13 +116,13 @@ class WalkAroundViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+//        showAlert("Please check your bluetooth settings.")
     }
     
     func locationManager(manager: CLLocationManager, rangingBeaconsDidFailForRegion region: CLBeaconRegion, withError error: NSError) {
+//        showAlert("Please check your bluetooth settings.")
     }
     
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
-        if status == CLAuthorizationStatus.AuthorizedWhenInUse {
-        }
     }
 }
