@@ -119,12 +119,20 @@ class WalkAroundViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+    func showAlert(title: String, message: String) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .Default) { (UIAlertAction) -> Void in
+            self.dismissViewControllerAnimated(true, completion: nil)
+        })
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
+    
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
-//        showAlert("Please check your bluetooth settings.")
+        showAlert("Unable to search for Oddstream beacons", message: "Please check your Bluetooth settings.")
     }
     
     func locationManager(manager: CLLocationManager, rangingBeaconsDidFailForRegion region: CLBeaconRegion, withError error: NSError) {
-//        showAlert("Please check your bluetooth settings.")
+        showAlert("Unable to search for Oddstream beacons", message: "Please check your Bluetooth settings.")
     }
     
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
