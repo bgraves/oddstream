@@ -14,8 +14,8 @@ class SelectTourViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let url = NSURL(string: "http://oddstream.miraclethings.nl/api/oddstream/tours")
-        
+        let baseUrl = NSBundle.mainBundle().infoDictionary!["API Base URL"] as! String
+        let url = NSURL(string: "\(baseUrl)/tours")
         let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
             do {
                 self.tours = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as! Array<Dictionary<String, AnyObject>>
