@@ -35,7 +35,7 @@ class ContentViewController: UIViewController, UIWebViewDelegate {
     }
     
     @IBAction func back(_: AnyObject) {
-        navigationController?.popViewControllerAnimated(true)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func webViewDidFinishLoad(webView: UIWebView) {

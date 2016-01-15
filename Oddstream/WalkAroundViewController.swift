@@ -55,6 +55,10 @@ class WalkAroundViewController: UIViewController, CLLocationManagerDelegate {
         task.resume()
     }
     
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
+    
     func startRangingBeacons() {
         if (!ranging && regions.count > 0) {
             ranging = true
@@ -93,7 +97,7 @@ class WalkAroundViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     @IBAction func back(_: AnyObject) {
-        navigationController?.popViewControllerAnimated(true)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {

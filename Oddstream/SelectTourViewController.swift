@@ -49,6 +49,10 @@ class SelectTourViewController: UIViewController {
         task.resume()
     }
     
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
+
     @IBAction func setTour(button: UIButton) {
         performSegueWithIdentifier("ShowWalkAroundViewController", sender: self.tours[button.tag])
     }
