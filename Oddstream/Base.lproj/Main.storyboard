@@ -25,9 +25,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oddstream-background" translatesAutoresizingMaskIntoConstraints="NO" id="qhh-Yi-hj3">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oddstream-logo" translatesAutoresizingMaskIntoConstraints="NO" id="XTl-co-I4U">
                                 <rect key="frame" x="51" y="51" width="498" height="57"/>
                                 <constraints>
@@ -41,17 +38,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="XTl-co-I4U" firstAttribute="centerY" secondItem="YUT-0l-SOl" secondAttribute="centerY" multiplier="0.265" id="2l4-LD-LUA"/>
-                            <constraint firstAttribute="bottom" secondItem="qhh-Yi-hj3" secondAttribute="bottom" id="82X-Ip-338"/>
-                            <constraint firstAttribute="trailing" secondItem="qhh-Yi-hj3" secondAttribute="trailing" id="8di-hv-uGS"/>
                             <constraint firstItem="zDH-XN-9GZ" firstAttribute="top" secondItem="XTl-co-I4U" secondAttribute="bottom" constant="20" id="JED-Eq-Ecq"/>
                             <constraint firstItem="XTl-co-I4U" firstAttribute="centerX" secondItem="YUT-0l-SOl" secondAttribute="centerX" id="adp-ts-ANU"/>
-                            <constraint firstItem="XTl-co-I4U" firstAttribute="width" secondItem="qhh-Yi-hj3" secondAttribute="width" multiplier="0.83" id="ajL-Jz-Mlb"/>
-                            <constraint firstItem="qhh-Yi-hj3" firstAttribute="leading" secondItem="YUT-0l-SOl" secondAttribute="leading" id="ba5-eb-Txc"/>
+                            <constraint firstItem="XTl-co-I4U" firstAttribute="width" secondItem="YUT-0l-SOl" secondAttribute="width" multiplier="0.83" id="kBV-e1-Ihr"/>
                             <constraint firstItem="zDH-XN-9GZ" firstAttribute="leading" secondItem="XTl-co-I4U" secondAttribute="leading" id="pMG-Pa-GTe"/>
-                            <constraint firstItem="qhh-Yi-hj3" firstAttribute="top" secondItem="YUT-0l-SOl" secondAttribute="top" id="rF2-al-hhT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iDB-9E-IbJ"/>
@@ -75,9 +68,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oddstream-background" translatesAutoresizingMaskIntoConstraints="NO" id="YXw-tB-UoV">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oddstream-illustration-step0" translatesAutoresizingMaskIntoConstraints="NO" id="jN8-SQ-PPe">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <constraints>
@@ -102,19 +92,15 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="h74-Wb-Gd4" firstAttribute="leading" secondItem="sM0-2f-MbZ" secondAttribute="leading" constant="20" id="1MX-nw-X6i"/>
                             <constraint firstAttribute="trailing" secondItem="h74-Wb-Gd4" secondAttribute="trailing" constant="20" id="3Tb-iy-FjG"/>
                             <constraint firstAttribute="trailing" secondItem="vOn-Mc-jMS" secondAttribute="trailing" constant="20" id="BZm-aU-LZb"/>
-                            <constraint firstItem="YXw-tB-UoV" firstAttribute="top" secondItem="sM0-2f-MbZ" secondAttribute="top" id="IEL-x6-WiJ"/>
-                            <constraint firstAttribute="bottom" secondItem="YXw-tB-UoV" secondAttribute="bottom" id="NkR-Sw-ODi"/>
                             <constraint firstAttribute="trailing" secondItem="jN8-SQ-PPe" secondAttribute="trailing" id="Uk6-gy-0s7"/>
                             <constraint firstItem="vOn-Mc-jMS" firstAttribute="top" secondItem="sM0-2f-MbZ" secondAttribute="top" constant="20" id="cr1-9U-1h0"/>
                             <constraint firstItem="jN8-SQ-PPe" firstAttribute="top" secondItem="sM0-2f-MbZ" secondAttribute="top" id="lhG-MK-zfo"/>
-                            <constraint firstItem="YXw-tB-UoV" firstAttribute="leading" secondItem="sM0-2f-MbZ" secondAttribute="leading" id="vDe-n0-mRA"/>
                             <constraint firstItem="jN8-SQ-PPe" firstAttribute="leading" secondItem="sM0-2f-MbZ" secondAttribute="leading" id="wFh-3O-ZX6"/>
-                            <constraint firstAttribute="trailing" secondItem="YXw-tB-UoV" secondAttribute="trailing" id="wvU-Ol-pAR"/>
                             <constraint firstAttribute="bottom" secondItem="h74-Wb-Gd4" secondAttribute="bottom" constant="20" id="z8r-da-uvS"/>
                         </constraints>
                     </view>
@@ -141,9 +127,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oddstream-background" translatesAutoresizingMaskIntoConstraints="NO" id="IP7-6l-gQU">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oddstream-logo_circle" translatesAutoresizingMaskIntoConstraints="NO" id="Wfr-hl-FoL">
                                 <rect key="frame" x="172" y="180" width="257" height="240"/>
                                 <constraints>
@@ -153,7 +136,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oddstream-logo_hexagon" translatesAutoresizingMaskIntoConstraints="NO" id="M9j-0a-Bvz">
                                 <rect key="frame" x="172" y="180" width="257" height="240"/>
                             </imageView>
-                            <webView alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c2x-Yr-MiR">
+                            <webView alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c2x-Yr-MiR">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
@@ -172,21 +155,21 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Wfr-hl-FoL" firstAttribute="centerY" secondItem="Ta7-ry-W2n" secondAttribute="centerY" id="2xq-Zr-YcK"/>
                             <constraint firstItem="t36-Mg-AKn" firstAttribute="top" secondItem="Ta7-ry-W2n" secondAttribute="top" constant="20" id="Dgq-ja-QcX"/>
-                            <constraint firstItem="Wfr-hl-FoL" firstAttribute="height" secondItem="IP7-6l-gQU" secondAttribute="height" multiplier="0.4" id="FBH-0c-5TD"/>
-                            <constraint firstItem="IP7-6l-gQU" firstAttribute="top" secondItem="Ta7-ry-W2n" secondAttribute="top" id="JYK-0D-67h"/>
                             <constraint firstAttribute="trailing" secondItem="t36-Mg-AKn" secondAttribute="trailing" constant="20" id="Ke4-Mg-2p5"/>
+                            <constraint firstItem="c2x-Yr-MiR" firstAttribute="top" secondItem="Ta7-ry-W2n" secondAttribute="top" id="Rl7-36-hmJ"/>
+                            <constraint firstItem="Wfr-hl-FoL" firstAttribute="height" secondItem="Ta7-ry-W2n" secondAttribute="height" multiplier="0.4" id="ZmJ-bM-erq"/>
                             <constraint firstItem="Wfr-hl-FoL" firstAttribute="centerX" secondItem="Ta7-ry-W2n" secondAttribute="centerX" id="ejn-Vj-skY"/>
                             <constraint firstItem="M9j-0a-Bvz" firstAttribute="width" secondItem="Wfr-hl-FoL" secondAttribute="width" id="jjR-lH-tkB"/>
-                            <constraint firstAttribute="bottom" secondItem="IP7-6l-gQU" secondAttribute="bottom" id="mK8-Lq-Kjb"/>
+                            <constraint firstAttribute="trailing" secondItem="c2x-Yr-MiR" secondAttribute="trailing" id="lwo-r7-gYn"/>
                             <constraint firstItem="M9j-0a-Bvz" firstAttribute="height" secondItem="Wfr-hl-FoL" secondAttribute="height" id="nE5-Wp-1wJ"/>
                             <constraint firstItem="M9j-0a-Bvz" firstAttribute="centerY" secondItem="Ta7-ry-W2n" secondAttribute="centerY" id="nOu-Jx-oEL"/>
-                            <constraint firstAttribute="trailing" secondItem="IP7-6l-gQU" secondAttribute="trailing" id="pAh-cd-L8c"/>
-                            <constraint firstItem="IP7-6l-gQU" firstAttribute="leading" secondItem="Ta7-ry-W2n" secondAttribute="leading" id="pSO-n3-Eh3"/>
                             <constraint firstItem="M9j-0a-Bvz" firstAttribute="centerX" secondItem="Ta7-ry-W2n" secondAttribute="centerX" id="uaH-Qa-z3S"/>
+                            <constraint firstAttribute="bottom" secondItem="c2x-Yr-MiR" secondAttribute="bottom" id="wbu-mT-CL7"/>
+                            <constraint firstItem="c2x-Yr-MiR" firstAttribute="leading" secondItem="Ta7-ry-W2n" secondAttribute="leading" id="wpJ-6a-v6E"/>
                         </constraints>
                     </view>
                     <connections>
@@ -200,7 +183,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Oddstream-background" width="1" height="256"/>
         <image name="Oddstream-cross" width="20" height="20"/>
         <image name="Oddstream-illustration-step0" width="1920" height="1920"/>
         <image name="Oddstream-logo" width="1920" height="220"/>
