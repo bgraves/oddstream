@@ -12,7 +12,7 @@ class ContentViewController: UIViewController, UIWebViewDelegate {
     @IBOutlet weak var circleImageView: UIImageView!
     @IBOutlet weak var hexagonImageView: UIImageView!
     @IBOutlet weak var webView: UIWebView!
-    var item: Dictionary<String, AnyObject> = [:]
+    var part: Dictionary<String, AnyObject> = [:]
     var rotateAnimation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation")
     
     override func viewDidLoad() {
@@ -30,12 +30,8 @@ class ContentViewController: UIViewController, UIWebViewDelegate {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        if let parts: Array<AnyObject> = item["parts"] as? Array<AnyObject> {
-            if (parts.count > 0) {
-                if let url: NSURL? = NSURL(string: parts[0]["url"] as! String) {
-                    webView.loadRequest(NSURLRequest.init(URL: url!))
-                }
-            }
+        if let url: NSURL? = NSURL(string: part["url"] as! String) {
+            webView.loadRequest(NSURLRequest.init(URL: url!))
         }
     }
     
@@ -51,9 +47,5 @@ class ContentViewController: UIViewController, UIWebViewDelegate {
             }) { (Bool) -> Void in
                 self.rotateAnimation.repeatCount = 0
         }
-    }
-    
-    override func prefersStatusBarHidden() -> Bool {
-        return true
     }
 }

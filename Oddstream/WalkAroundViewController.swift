@@ -95,8 +95,8 @@ class WalkAroundViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let contentViewController = segue.destinationViewController as! ContentViewController
-        contentViewController.item = sender as! Dictionary<String, AnyObject>
+        let pageViewController = segue.destinationViewController as! PageViewController
+        pageViewController.item = sender as! Dictionary<String, AnyObject>
     }
     
     @IBAction func back(_: AnyObject) {
@@ -113,7 +113,7 @@ class WalkAroundViewController: UIViewController, CLLocationManagerDelegate {
                             if let minor = itemBeacon["minor"] {
                                 if (beacon.major == major as! Int && beacon.minor == minor as! Int) {
                                     stopRangingBeacons()
-                                    performSegueWithIdentifier("ShowContentViewController", sender: item)
+                                    performSegueWithIdentifier("ShowPageViewController", sender: item)
                                     break
                                 }
                             }

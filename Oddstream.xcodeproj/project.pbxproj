@@ -19,6 +19,7 @@
 		D60C801A1C4544A800EC1EDD /* Lekton-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D60C80171C4544A800EC1EDD /* Lekton-Bold.ttf */; };
 		D60C801C1C4545E100EC1EDD /* WalkAroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C801B1C4545E100EC1EDD /* WalkAroundViewController.swift */; };
 		D60C802E1C468F6E00EC1EDD /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C802D1C468F6E00EC1EDD /* ContentViewController.swift */; };
+		D64180BD1C4EA38D007153E7 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64180BC1C4EA38D007153E7 /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		D60C80171C4544A800EC1EDD /* Lekton-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lekton-Bold.ttf"; sourceTree = "<group>"; };
 		D60C801B1C4545E100EC1EDD /* WalkAroundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WalkAroundViewController.swift; sourceTree = "<group>"; };
 		D60C802D1C468F6E00EC1EDD /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
+		D64180BC1C4EA38D007153E7 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				D60C7FF31C4534D000EC1EDD /* Info.plist */,
 				D60C801B1C4545E100EC1EDD /* WalkAroundViewController.swift */,
 				D60C802D1C468F6E00EC1EDD /* ContentViewController.swift */,
+				D64180BC1C4EA38D007153E7 /* PageViewController.swift */,
 			);
 			path = Oddstream;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D60C802E1C468F6E00EC1EDD /* ContentViewController.swift in Sources */,
+				D64180BD1C4EA38D007153E7 /* PageViewController.swift in Sources */,
 				D60C7FEA1C4534D000EC1EDD /* SelectTourViewController.swift in Sources */,
 				D60C7FE81C4534D000EC1EDD /* AppDelegate.swift in Sources */,
 				D60C801C1C4545E100EC1EDD /* WalkAroundViewController.swift in Sources */,
