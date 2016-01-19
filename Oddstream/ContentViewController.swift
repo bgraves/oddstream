@@ -35,6 +35,12 @@ class ContentViewController: UIViewController, UIWebViewDelegate {
         }
     }
     
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        webView.loadHTMLString("", baseURL: nil)
+    }
+    
     @IBAction func back(_: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
