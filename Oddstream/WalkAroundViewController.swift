@@ -16,6 +16,7 @@ class WalkAroundViewController: UIViewController, CLLocationManagerDelegate {
     var locationManager = CLLocationManager()
     var regions: Array<CLBeaconRegion> = []
     var ranging = false
+    var canShowAlert = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,12 +83,14 @@ class WalkAroundViewController: UIViewController, CLLocationManagerDelegate {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
+        canShowAlert = true
         startRangingBeacons()
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
 
+        canShowAlert = false
         stopRangingBeacons()
     }
     
@@ -120,11 +123,15 @@ class WalkAroundViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func showAlert(title: String, message: String) {
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .Default) { (UIAlertAction) -> Void in
-            self.dismissViewControllerAnimated(true, completion: nil)
-        })
-        self.presentViewController(alertController, animated: true, completion: nil)
+        if (canShowAlert) {
+            canShowAlert = false
+            let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .Default) { (UIAlertAction) -> Void in
+                self.canShowAlert = true
+                self.dismissViewControllerAnimated(true, completion: nil)
+                })
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }
     }
     
     func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
