@@ -16,7 +16,7 @@ class WalkAroundViewController: UIViewController, CLLocationManagerDelegate {
     var locationManager = CLLocationManager()
     var regions: Array<CLBeaconRegion> = []
     var ranging = false
-    var canShowAlert = false
+    var canPresentViewController = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,14 +83,14 @@ class WalkAroundViewController: UIViewController, CLLocationManagerDelegate {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
 
-        canShowAlert = true
+        canPresentViewController = true
         startRangingBeacons()
     }
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
 
-        canShowAlert = false
+        canPresentViewController = false
         stopRangingBeacons()
     }
     
@@ -104,16 +104,18 @@ class WalkAroundViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
-        for beacon in beacons {
-            if (beacon.rssi >= -55 && beacon.rssi < 0) {
-                for item in self.tour["items"] as! Array<Dictionary<String, AnyObject>> {
-                    var itemBeacon: Dictionary<String, AnyObject> = item["beacon"] as! Dictionary<String, AnyObject>
-                    if let major = itemBeacon["major"] {
-                        if let minor = itemBeacon["minor"] {
-                            if (beacon.major == major as! Int && beacon.minor == minor as! Int) {
-                                stopRangingBeacons()
-                                performSegueWithIdentifier("ShowContentViewController", sender: item)
-                                break
+        if (canPresentViewController) {
+            for beacon in beacons {
+                if (beacon.rssi >= -55 && beacon.rssi < 0) {
+                    for item in self.tour["items"] as! Array<Dictionary<String, AnyObject>> {
+                        var itemBeacon: Dictionary<String, AnyObject> = item["beacon"] as! Dictionary<String, AnyObject>
+                        if let major = itemBeacon["major"] {
+                            if let minor = itemBeacon["minor"] {
+                                if (beacon.major == major as! Int && beacon.minor == minor as! Int) {
+                                    stopRangingBeacons()
+                                    performSegueWithIdentifier("ShowContentViewController", sender: item)
+                                    break
+                                }
                             }
                         }
                     }
@@ -123,11 +125,11 @@ class WalkAroundViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func showAlert(title: String, message: String) {
-        if (canShowAlert) {
-            canShowAlert = false
+        if (canPresentViewController) {
+            canPresentViewController = false
             let alertController = UIAlertController(title: title, message: message, preferredStyle: .Alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .Default) { (UIAlertAction) -> Void in
-                self.canShowAlert = true
+                self.canPresentViewController = true
                 self.dismissViewControllerAnimated(true, completion: nil)
                 })
             self.presentViewController(alertController, animated: true, completion: nil)
