@@ -52,4 +52,8 @@ class ContentViewController: UIViewController, UIWebViewDelegate {
                 self.rotateAnimation.repeatCount = 0
         }
     }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 }

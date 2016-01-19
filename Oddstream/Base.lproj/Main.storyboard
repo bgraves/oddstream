@@ -173,6 +173,7 @@
                             <constraint firstItem="c2x-Yr-MiR" firstAttribute="leading" secondItem="Ta7-ry-W2n" secondAttribute="leading" id="wpJ-6a-v6E"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="circleImageView" destination="Wfr-hl-FoL" id="WN7-PY-oGe"/>
                         <outlet property="hexagonImageView" destination="M9j-0a-Bvz" id="BXq-jF-q13"/>
