@@ -10,17 +10,32 @@ import UIKit
 
 class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
     var item: Dictionary<String, AnyObject> = [:]
-    var parts: Array<Dictionary<String, AnyObject>> = []
+    var contentViewControllers: Array<ContentViewController> = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.dataSource = self
-        parts = (item["parts"] as? Array<Dictionary<String, AnyObject>>)!
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
+        let parts: Array<Dictionary<String, AnyObject>> = (item["parts"] as? Array<Dictionary<String, AnyObject>>)!
+        for part in parts {
+            let contentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ContentViewController") as! ContentViewController
+            contentViewController.part = part
+            contentViewControllers.append(contentViewController)
+        }
         setViewControllers([ viewControllerAtIndex(0)! ], direction: UIPageViewControllerNavigationDirection.Forward, animated: true, completion: nil)
     }
-
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        
+        contentViewControllers = []
+    }
+    
     @IBAction func back(_: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
@@ -30,18 +45,15 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
     }
     
     func viewControllerAtIndex(index: Int) -> ContentViewController? {
-        if (parts.count == 0 || index < 0 || index >= parts.count) {
+        if (contentViewControllers.count == 0 || index < 0 || index >= contentViewControllers.count) {
             return nil
         }
         
-        let contentViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ContentViewController") as! ContentViewController
-        contentViewController.part = parts[index]
-        return contentViewController
+        return contentViewControllers[index]
     }
     
     func indexOfViewController(viewController: ContentViewController) -> Int {
-        let index = parts.indexOf({ $0["id"] as! Int == viewController.part["id"] as! Int })!
-        return index
+        return contentViewControllers.indexOf(viewController)!
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
@@ -58,7 +70,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         let index = indexOfViewController(viewController as! ContentViewController)
         
-        if (index >= (parts.count - 1) || index == NSNotFound) {
+        if (index >= (contentViewControllers.count - 1) || index == NSNotFound) {
             return nil
         }
         
@@ -67,7 +79,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
     }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return parts.count
+        return contentViewControllers.count
     }
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
