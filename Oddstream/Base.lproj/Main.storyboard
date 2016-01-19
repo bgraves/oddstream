@@ -81,10 +81,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vOn-Mc-jMS">
-                                <rect key="frame" x="560" y="20" width="20" height="20"/>
+                                <rect key="frame" x="540" y="0.0" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="J8Z-pq-NOV"/>
-                                    <constraint firstAttribute="height" constant="20" id="qTs-Wb-zTk"/>
+                                    <constraint firstAttribute="width" constant="60" id="J8Z-pq-NOV"/>
+                                    <constraint firstAttribute="height" constant="60" id="qTs-Wb-zTk"/>
                                 </constraints>
                                 <state key="normal" image="Oddstream-cross"/>
                                 <connections>
@@ -96,9 +96,9 @@
                         <constraints>
                             <constraint firstItem="h74-Wb-Gd4" firstAttribute="leading" secondItem="sM0-2f-MbZ" secondAttribute="leading" constant="20" id="1MX-nw-X6i"/>
                             <constraint firstAttribute="trailing" secondItem="h74-Wb-Gd4" secondAttribute="trailing" constant="20" id="3Tb-iy-FjG"/>
-                            <constraint firstAttribute="trailing" secondItem="vOn-Mc-jMS" secondAttribute="trailing" constant="20" id="BZm-aU-LZb"/>
+                            <constraint firstAttribute="trailing" secondItem="vOn-Mc-jMS" secondAttribute="trailing" id="BZm-aU-LZb"/>
                             <constraint firstAttribute="trailing" secondItem="jN8-SQ-PPe" secondAttribute="trailing" id="Uk6-gy-0s7"/>
-                            <constraint firstItem="vOn-Mc-jMS" firstAttribute="top" secondItem="sM0-2f-MbZ" secondAttribute="top" constant="20" id="cr1-9U-1h0"/>
+                            <constraint firstItem="vOn-Mc-jMS" firstAttribute="top" secondItem="sM0-2f-MbZ" secondAttribute="top" id="cr1-9U-1h0"/>
                             <constraint firstItem="jN8-SQ-PPe" firstAttribute="top" secondItem="sM0-2f-MbZ" secondAttribute="top" id="lhG-MK-zfo"/>
                             <constraint firstItem="jN8-SQ-PPe" firstAttribute="leading" secondItem="sM0-2f-MbZ" secondAttribute="leading" id="wFh-3O-ZX6"/>
                             <constraint firstAttribute="bottom" secondItem="h74-Wb-Gd4" secondAttribute="bottom" constant="20" id="z8r-da-uvS"/>
@@ -145,10 +145,10 @@
                                 </connections>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t36-Mg-AKn">
-                                <rect key="frame" x="560" y="20" width="20" height="20"/>
+                                <rect key="frame" x="540" y="0.0" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="20" id="3EU-h4-hJ2"/>
-                                    <constraint firstAttribute="height" constant="20" id="pXZ-ZG-fT6"/>
+                                    <constraint firstAttribute="width" constant="60" id="3EU-h4-hJ2"/>
+                                    <constraint firstAttribute="height" constant="60" id="pXZ-ZG-fT6"/>
                                 </constraints>
                                 <state key="normal" image="Oddstream-cross"/>
                                 <connections>
@@ -159,8 +159,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Wfr-hl-FoL" firstAttribute="centerY" secondItem="Ta7-ry-W2n" secondAttribute="centerY" id="2xq-Zr-YcK"/>
-                            <constraint firstItem="t36-Mg-AKn" firstAttribute="top" secondItem="Ta7-ry-W2n" secondAttribute="top" constant="20" id="Dgq-ja-QcX"/>
-                            <constraint firstAttribute="trailing" secondItem="t36-Mg-AKn" secondAttribute="trailing" constant="20" id="Ke4-Mg-2p5"/>
+                            <constraint firstItem="t36-Mg-AKn" firstAttribute="top" secondItem="Ta7-ry-W2n" secondAttribute="top" id="Dgq-ja-QcX"/>
+                            <constraint firstAttribute="trailing" secondItem="t36-Mg-AKn" secondAttribute="trailing" id="Ke4-Mg-2p5"/>
                             <constraint firstItem="c2x-Yr-MiR" firstAttribute="top" secondItem="Ta7-ry-W2n" secondAttribute="top" id="Rl7-36-hmJ"/>
                             <constraint firstItem="Wfr-hl-FoL" firstAttribute="height" secondItem="Ta7-ry-W2n" secondAttribute="height" multiplier="0.4" id="ZmJ-bM-erq"/>
                             <constraint firstItem="Wfr-hl-FoL" firstAttribute="centerX" secondItem="Ta7-ry-W2n" secondAttribute="centerX" id="ejn-Vj-skY"/>
