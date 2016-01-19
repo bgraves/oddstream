@@ -29,8 +29,12 @@ class ContentViewController: UIViewController, UIWebViewDelegate {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        if let url: NSURL? = NSURL(string: item["url"] as! String) {
-            webView.loadRequest(NSURLRequest.init(URL: url!))
+        if let parts: Array<AnyObject> = item["parts"] as? Array<AnyObject> {
+            if (parts.count > 0) {
+                if let url: NSURL? = NSURL(string: parts[0]["url"] as! String) {
+                    webView.loadRequest(NSURLRequest.init(URL: url!))
+                }
+            }
         }
     }
     
