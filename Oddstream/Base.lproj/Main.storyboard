@@ -136,9 +136,10 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Oddstream-logo_hexagon" translatesAutoresizingMaskIntoConstraints="NO" id="M9j-0a-Bvz">
                                 <rect key="frame" x="172" y="180" width="257" height="240"/>
                             </imageView>
-                            <webView alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c2x-Yr-MiR">
+                            <webView alpha="0.0" contentMode="scaleToFill" scalesPageToFit="YES" mediaPlaybackAllowsAirPlay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2x-Yr-MiR">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <dataDetectorType key="dataDetectorTypes"/>
                                 <connections>
                                     <outlet property="delegate" destination="dpr-kN-xfK" id="oeo-mW-bR4"/>
                                 </connections>
@@ -173,7 +174,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="imageView" destination="M9j-0a-Bvz" id="o07-07-PNa"/>
+                        <outlet property="circleImageView" destination="Wfr-hl-FoL" id="WN7-PY-oGe"/>
+                        <outlet property="hexagonImageView" destination="M9j-0a-Bvz" id="BXq-jF-q13"/>
                         <outlet property="webView" destination="c2x-Yr-MiR" id="iTb-BV-rJ0"/>
                     </connections>
                 </viewController>

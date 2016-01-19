@@ -9,7 +9,8 @@
 import UIKit
 
 class ContentViewController: UIViewController, UIWebViewDelegate {
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var circleImageView: UIImageView!
+    @IBOutlet weak var hexagonImageView: UIImageView!
     @IBOutlet weak var webView: UIWebView!
     var item: Dictionary<String, AnyObject> = [:]
     var rotateAnimation: CABasicAnimation = CABasicAnimation(keyPath: "transform.rotation")
@@ -23,7 +24,7 @@ class ContentViewController: UIViewController, UIWebViewDelegate {
         rotateAnimation.delegate = self
         rotateAnimation.removedOnCompletion = false
         rotateAnimation.repeatCount = HUGE
-        imageView.layer.addAnimation(rotateAnimation, forKey: nil)
+        hexagonImageView.layer.addAnimation(rotateAnimation, forKey: nil)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -44,6 +45,8 @@ class ContentViewController: UIViewController, UIWebViewDelegate {
     
     func webViewDidFinishLoad(webView: UIWebView) {
         UIView.animateWithDuration(0.5, animations: { () -> Void in
+            self.circleImageView.alpha = 0
+            self.hexagonImageView.alpha = 0
             webView.alpha = 1.0
             }) { (Bool) -> Void in
                 self.rotateAnimation.repeatCount = 0
