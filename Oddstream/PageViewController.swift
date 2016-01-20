@@ -66,7 +66,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
     }
     
     func presentationCountForPageViewController(pageViewController: UIPageViewController) -> Int {
-        return parts.count
+        return parts.count > 1 ? parts.count : 0
     }
     
     func presentationIndexForPageViewController(pageViewController: UIPageViewController) -> Int {
