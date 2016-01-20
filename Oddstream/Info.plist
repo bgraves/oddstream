@@ -4,19 +4,6 @@
 <dict>
 	<key>API Base URL</key>
 	<string>http://oddstream.miraclethings.nl/api/oddstream</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>This application requires your permission to interact with the beacons in the Oddstream exhibition.</string>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Lekton-Bold.ttf</string>
-		<string>Lekton-Italic.ttf</string>
-		<string>Lekton-Regular.ttf</string>
-	</array>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -37,6 +24,19 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This application requires your permission to interact with the beacons in the Oddstream exhibition.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Lekton-Bold.ttf</string>
+		<string>Lekton-Italic.ttf</string>
+		<string>Lekton-Regular.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -45,6 +45,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIRequiresFullScreen</key>
+	<true/>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
