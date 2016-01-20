@@ -425,7 +425,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Oddstream/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.framestream.Oddstream;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.oddstream.Oddstream;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -436,7 +436,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Oddstream/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.framestream.Oddstream;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.oddstream.Oddstream;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -447,7 +447,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = OddstreamTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.framestream.OddstreamTests;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.oddstream.OddstreamTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Oddstream.app/Oddstream";
 			};
@@ -459,7 +459,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = OddstreamTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.framestream.OddstreamTests;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.oddstream.OddstreamTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Oddstream.app/Oddstream";
 			};
@@ -470,7 +470,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = OddstreamUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.framestream.OddstreamUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.oddstream.OddstreamUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = Oddstream;
 				USES_XCTRUNNER = YES;
@@ -482,7 +482,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = OddstreamUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = nl.framestream.OddstreamUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = nl.oddstream.OddstreamUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = Oddstream;
 				USES_XCTRUNNER = YES;
