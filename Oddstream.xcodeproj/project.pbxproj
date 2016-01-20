@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A33E263F629C40C7AF16A2D /* libPods-Oddstream.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57BE6C4704F3AFABAEEEEDEC /* libPods-Oddstream.a */; };
 		D60C7FE81C4534D000EC1EDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7FE71C4534D000EC1EDD /* AppDelegate.swift */; };
 		D60C7FEA1C4534D000EC1EDD /* SelectTourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60C7FE91C4534D000EC1EDD /* SelectTourViewController.swift */; };
 		D60C7FED1C4534D000EC1EDD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D60C7FEB1C4534D000EC1EDD /* Main.storyboard */; };
@@ -40,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		550CB1A2FCFB9729D00EB8E5 /* Pods-Oddstream.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Oddstream.release.xcconfig"; path = "Pods/Target Support Files/Pods-Oddstream/Pods-Oddstream.release.xcconfig"; sourceTree = "<group>"; };
+		57BE6C4704F3AFABAEEEEDEC /* libPods-Oddstream.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Oddstream.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		76B3327CCB83903FA2D8772B /* Pods-Oddstream.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Oddstream.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Oddstream/Pods-Oddstream.debug.xcconfig"; sourceTree = "<group>"; };
 		D60C7FE41C4534D000EC1EDD /* Oddstream.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Oddstream.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D60C7FE71C4534D000EC1EDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D60C7FE91C4534D000EC1EDD /* SelectTourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTourViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A33E263F629C40C7AF16A2D /* libPods-Oddstream.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CEEF3B3706B97DB6C26B8420 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57BE6C4704F3AFABAEEEEDEC /* libPods-Oddstream.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D60C7FDB1C4534CF00EC1EDD = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +106,8 @@
 				D60C7FFB1C4534D000EC1EDD /* OddstreamTests */,
 				D60C80061C4534D000EC1EDD /* OddstreamUITests */,
 				D60C7FE51C4534D000EC1EDD /* Products */,
+				F623B87ADF3AEA87D3383EE1 /* Pods */,
+				CEEF3B3706B97DB6C26B8420 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +158,15 @@
 			path = OddstreamUITests;
 			sourceTree = "<group>";
 		};
+		F623B87ADF3AEA87D3383EE1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76B3327CCB83903FA2D8772B /* Pods-Oddstream.debug.xcconfig */,
+				550CB1A2FCFB9729D00EB8E5 /* Pods-Oddstream.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,9 +174,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D60C800C1C4534D000EC1EDD /* Build configuration list for PBXNativeTarget "Oddstream" */;
 			buildPhases = (
+				8A5657F9A8B4C6DD5FB97A9E /* Check Pods Manifest.lock */,
 				D60C7FE01C4534CF00EC1EDD /* Sources */,
 				D60C7FE11C4534CF00EC1EDD /* Frameworks */,
 				D60C7FE21C4534CF00EC1EDD /* Resources */,
+				D77AA4CDEE37C3A309FBC1A7 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -271,6 +297,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8A5657F9A8B4C6DD5FB97A9E /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D77AA4CDEE37C3A309FBC1A7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Oddstream/Pods-Oddstream-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D60C7FE01C4534CF00EC1EDD /* Sources */ = {
@@ -421,6 +480,7 @@
 		};
 		D60C800D1C4534D000EC1EDD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76B3327CCB83903FA2D8772B /* Pods-Oddstream.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Oddstream/Info.plist;
@@ -432,6 +492,7 @@
 		};
 		D60C800E1C4534D000EC1EDD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 550CB1A2FCFB9729D00EB8E5 /* Pods-Oddstream.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Oddstream/Info.plist;
