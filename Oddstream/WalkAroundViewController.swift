@@ -105,8 +105,9 @@ class WalkAroundViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager, didRangeBeacons beacons: [CLBeacon], inRegion region: CLBeaconRegion) {
         if (canPresentViewController) {
+            let rssiLimit = UIDevice.currentDevice().userInterfaceIdiom == UIUserInterfaceIdiom.Pad ? -65 : -50
             for beacon in beacons {
-                if (beacon.rssi >= -50 && beacon.rssi < 0) {
+                if (beacon.rssi >= rssiLimit && beacon.rssi < 0) {
                     for item in self.tour["items"] as! Array<Dictionary<String, AnyObject>> {
                         var itemBeacon: Dictionary<String, AnyObject> = item["beacon"] as! Dictionary<String, AnyObject>
                         if let major = itemBeacon["major"] {
