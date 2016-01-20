@@ -40,8 +40,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
     }
     
     func indexOfViewController(viewController: ContentViewController) -> Int {
-        let index = parts.indexOf({ $0["id"] as! Int == viewController.part["id"] as! Int })!
-        return index
+        return parts.indexOf({ $0["id"] as! Int == viewController.part["id"] as! Int })!
     }
     
     func pageViewController(pageViewController: UIPageViewController, viewControllerBeforeViewController viewController: UIViewController) -> UIViewController? {
