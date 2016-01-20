@@ -106,12 +106,10 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="jN8-SQ-PPe" id="gDb-Lo-UBk"/>
-                        <segue destination="bDp-HC-uy3" kind="unwind" customClass="FadeSegue" customModule="Oddstream" customModuleProvider="target" unwindAction="returnFromSegueActions:" id="g9X-Yr-1TZ"/>
                         <segue destination="V9z-mW-U2F" kind="show" identifier="ShowPageViewController" id="eNF-Mm-ZTU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Dr-EZ-r2K" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="bDp-HC-uy3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1299" y="537"/>
         </scene>
