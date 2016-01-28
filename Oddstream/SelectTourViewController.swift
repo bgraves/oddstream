@@ -23,7 +23,7 @@ class SelectTourViewController: UIViewController {
                 if self.tours.count > 0 {
                     dispatch_async(dispatch_get_main_queue(), {
                         var index = 0
-                        var y = self.view.bounds.size.height / 2 - CGFloat(self.tours.count * 50) - CGFloat((self.tours.count - 1) * 25)
+                        var y = self.view.bounds.size.height * 9 / 16 - CGFloat(self.tours.count * 50) - CGFloat((self.tours.count - 1) * 25)
                         
                         for tour in self.tours {
                             let button = UIButton.init(type: UIButtonType.Custom)
