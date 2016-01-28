@@ -40,14 +40,14 @@ class WalkAroundViewController: UIViewController, CLLocationManagerDelegate {
             }
             
             for item in self.tour["items"] as! Array<Dictionary<String, AnyObject>> {
-                var beacon: Dictionary<String, AnyObject> = item["beacon"] as! Dictionary<String, AnyObject>
-                if let uuidString = beacon["uuid"],
-					uuid = NSUUID(UUIDString: uuidString as! String),
-					major = beacon["major"],
-					minor = beacon["minor"],
-					id = beacon["id"] {
-					let region = CLBeaconRegion(proximityUUID: uuid, major: UInt16(major as! Int), minor: UInt16(minor as! Int), identifier: "\(id)")
-					self.regions.append(region)
+                if let beacon = item["beacon"] as? Dictionary<String, AnyObject>,
+                    uuidString = beacon["uuid"],
+                    uuid = NSUUID(UUIDString: uuidString as! String),
+                    major = beacon["major"],
+                    minor = beacon["minor"],
+                    id = beacon["id"] {
+                        let region = CLBeaconRegion(proximityUUID: uuid, major: UInt16(major as! Int), minor: UInt16(minor as! Int), identifier: "\(id)")
+                        self.regions.append(region)
                 }
 			}
             self.startRangingBeacons()
