@@ -29,7 +29,11 @@ class WalkAroundViewController: UIViewController, CLLocationManagerDelegate {
         }
 
         let url = NSURL(string: "http://oddstream.miraclethings.nl/api/oddstream/tour?id=\(tourId)")
-        let task = NSURLSession.sharedSession().dataTaskWithURL(url!) {(data, response, error) in
+		let sessionConf = NSURLSessionConfiguration.defaultSessionConfiguration()
+		sessionConf.requestCachePolicy = NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData
+		let session = NSURLSession(configuration: sessionConf)
+		
+        let task = session.dataTaskWithURL(url!) {(data, response, error) in
             do {
                 self.tour = try NSJSONSerialization.JSONObjectWithData(data!, options: []) as! Dictionary<String, AnyObject>
             } catch {
@@ -37,20 +41,15 @@ class WalkAroundViewController: UIViewController, CLLocationManagerDelegate {
             
             for item in self.tour["items"] as! Array<Dictionary<String, AnyObject>> {
                 var beacon: Dictionary<String, AnyObject> = item["beacon"] as! Dictionary<String, AnyObject>
-                if let uuidString = beacon["uuid"] {
-                    if let uuid = NSUUID(UUIDString: uuidString as! String) {
-                        if let major = beacon["major"] {
-                            if let minor = beacon["minor"] {
-                                if let id = beacon["id"] {
-                                    let region = CLBeaconRegion(proximityUUID: uuid, major: UInt16(major as! Int), minor: UInt16(minor as! Int), identifier: "\(id)")
-                                    self.regions.append(region)
-                                }
-                            }
-                        }
-                    }
+                if let uuidString = beacon["uuid"],
+					uuid = NSUUID(UUIDString: uuidString as! String),
+					major = beacon["major"],
+					minor = beacon["minor"],
+					id = beacon["id"] {
+					let region = CLBeaconRegion(proximityUUID: uuid, major: UInt16(major as! Int), minor: UInt16(minor as! Int), identifier: "\(id)")
+					self.regions.append(region)
                 }
-            }
-            
+			}
             self.startRangingBeacons()
         }
         task.resume()
