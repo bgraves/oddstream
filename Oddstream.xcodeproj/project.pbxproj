@@ -498,11 +498,8 @@
 			baseConfigurationReference = 76B3327CCB83903FA2D8772B /* Pods-Oddstream.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-<<<<<<< HEAD
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-=======
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
->>>>>>> d3a421ed43d031ae95b701a4f105a7b760cf5ae5
 				INFOPLIST_FILE = Oddstream/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nl.oddstream.Oddstream;
